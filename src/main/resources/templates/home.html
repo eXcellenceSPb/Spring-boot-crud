@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>User page</title>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row content">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">SpringBoot CRUD</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/logout"><span class="glyphicon glyphicon-user"></span> Log out</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="col-sm-3 sidenav well">
+            <h4>Menu</h4>
+            <ul class="nav nav-pills nav-stacked ">
+                <li><a href="/employee">Admin</a></li>
+                <li class="active"><a href="/">User</a></li>
+            </ul>
+        </div>
+
+        <div class="col-sm-9">
+            <div class="container-fluid well">
+                <h1>User page</h1>
+                <h2> Visit <a th:href="@{/employee}">Admin page (Spring Security protected, Need Admin Role)</a>
+                    or <a th:href="@{/logout}">Sign Out</a>
+                </h2>
+                <div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
